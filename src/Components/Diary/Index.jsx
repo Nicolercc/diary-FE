@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import EntryCard from "./EntryCard";
 
 const EntryList = () => {
   const [entries, setEntries] = useState([]);
@@ -18,15 +20,13 @@ const EntryList = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Entry List</h1>
-      <ul>
+    <div className="entry-list-container">
+      <h5>Entry List</h5>
+      <div className="entry-card-container">
         {entries.map((entry) => (
-          <li key={entry.id}>
-            <strong>{entry.title}</strong>: {entry.content}
-          </li>
+          <EntryCard key={entry.entry_id} entry={entry} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
