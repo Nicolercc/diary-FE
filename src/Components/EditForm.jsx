@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const API = import.meta.env.VITE_API_URL;
+
 function EditForm() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -45,7 +47,7 @@ function EditForm() {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:3004/entries/${id}`, formData);
+      await axios.put(`${API}/entries/${id}`, formData);
       navigate(`/show/${id}`);
     } catch (error) {
       console.error("Error editing entry:", error);

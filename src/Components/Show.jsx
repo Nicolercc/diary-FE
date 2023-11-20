@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const API = import.meta.env.VITE_API_URL;
+
 function Show() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -10,7 +12,7 @@ function Show() {
   useEffect(() => {
     const fetchEntry = async () => {
       try {
-        const response = await axios.get(`http://localhost:3004/entries/${id}`);
+        const response = await axios.get(`${API}/entries/${id}`);
         setEntry(response.data);
       } catch (error) {
         console.error("Error fetching entry:", error);
@@ -29,9 +31,7 @@ function Show() {
 
     if (isConfirmed) {
       try {
-        const response = await axios.delete(
-          `http://localhost:3004/entries/${id}`
-        );
+        const response = await axios.delete(`${API}/entries/${id}`);
         if (response.data) {
           navigate("/all");
         } else {

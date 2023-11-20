@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { redirect } from "react-router-dom";
 import axios from "axios";
 
+const API = import.meta.env.VITE_API_URL;
+
 const NewForm = () => {
   const [formData, setFormData] = useState({
     title: "",
@@ -19,7 +21,7 @@ const NewForm = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:3004/entries", formData);
+      await axios.post(`${API}/entries`, formData);
       console.log("Entry created successfully!");
       redirect("/");
     } catch (error) {

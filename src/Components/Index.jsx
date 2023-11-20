@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import EntryCard from "./EntryCard";
 
+const API = import.meta.env.VITE_API_URL;
+
 const EntryList = () => {
   const [entries, setEntries] = useState([]);
 
   useEffect(() => {
     const fetchEntries = async () => {
       try {
-        const response = await axios.get("http://localhost:3004/entries");
+        const response = await axios.get(`${API}/entries`);
         setEntries(response.data);
       } catch (error) {
         console.error("Error fetching entries:", error);
