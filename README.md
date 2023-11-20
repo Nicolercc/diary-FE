@@ -44,7 +44,7 @@ Make sure you have the following installed before setting up the project:
 ### Relevant Links
 
 - [Backend Repository](https://github.com/Nicolercc/diary-be)
-- [Backend Deployed Link]()
-- [ Website ]
+- [Backend Deployed Link](https://diary-api-cjiz.onrender.com)
 
-[Node.js](https://nodejs.org/)
+- [ Website ]
+- [presentation]
