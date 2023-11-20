@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./Components/Diary/NavBar";
-import Index from "./Components/Diary/Index";
-import NewForm from "./Components/Diary/NewForm";
-import Show from "./Components/Diary/Show";
-import Edit from "./Components/Diary/EditForm";
+import NavBar from "./Components/NavBar";
+import Index from "./Components/Index";
+import NewForm from "./Components/NewForm";
+import Show from "./Components/Show";
+import Edit from "./Components/EditForm";
 import "./app.css";
 import Home from "./Pages/Home";
 const App = () => {
