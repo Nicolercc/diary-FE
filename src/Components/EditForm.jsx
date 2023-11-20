@@ -17,7 +17,7 @@ function EditForm() {
   useEffect(() => {
     const fetchEntry = async () => {
       try {
-        const response = await axios.get(`http://localhost:3004/entries/${id}`);
+        const response = await axios.get(`${API}/entries/${id}`);
         // Prefill the form data with the fetched entry
         setFormData(response.data);
       } catch (error) {
