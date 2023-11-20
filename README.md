@@ -20,16 +20,16 @@ Make sure you have the following installed before setting up the project:
 
 ## Installation
 
-1. **Clone the Repository:**
+1. **Clone, Install & Run:**
 
    ```bash
    git clone https://github.com/your-username/your-journal-app.git
 
-    "cd diary-fe"
+    - "cd diary-fe"
 
-    "npm install"
+    - Install: "npm install"
 
-    "npm run dev"
+    - Run: "npm run dev"
 
    ```
 
