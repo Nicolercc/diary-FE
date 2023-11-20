@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Show() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [entry, setEntry] = useState(null);
 
   useEffect(() => {
@@ -20,8 +21,29 @@ function Show() {
   }, [id]);
 
   if (!entry) {
-    // You can render a loading state or redirect to an error page
     return <div>Loading...</div>;
+  }
+
+  async function handleDelete() {
+    const isConfirmed = window.confirm("Are you sure you want to delete this?");
+
+    if (isConfirmed) {
+      try {
+        const response = await axios.delete(
+          `http://localhost:3004/entries/${id}`
+        );
+        if (response.data) {
+          navigate("/all");
+        } else {
+          console.log("Entry not found, but deletion considered successful");
+          navigate("/all");
+        }
+      } catch (e) {
+        console.log("error deleting:", e);
+      }
+    } else {
+      console.log("Deletion Canceled");
+    }
   }
 
   return (
@@ -29,7 +51,9 @@ function Show() {
       <div className="card mx-auto" style={{ maxWidth: "600px" }}>
         <div className="card-body text-center">
           <h2 className="card-title">{entry.title}</h2>
-          <h4 className="card-subtitle mb-2 text-muted">{entry.mood}</h4>
+          <h5 className="card-subtitle mb-2 text-muted">
+            I am feeing: {entry.mood}
+          </h5>
           <p className="card-text">{entry.content}</p>
           <p className="card-text">
             <strong>Creation Date:</strong> {entry.creation_date}
@@ -51,8 +75,15 @@ function Show() {
         </div>
       </div>
       <div className="mt-3 text-center">
-        <button className="btn btn-primary mx-2">Edit</button>
-        <button className="btn btn-danger mx-2">Delete</button>
+        <button
+          className="btn btn-primary mx-2"
+          onClick={() => navigate(`/edit/${id}`)}
+        >
+          Edit
+        </button>
+        <button className="btn btn-danger mx-2" onClick={handleDelete}>
+          Delete
+        </button>
       </div>
     </div>
   );

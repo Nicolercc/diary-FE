@@ -4,10 +4,9 @@ import axios from "axios";
 
 const NewForm = () => {
   const [formData, setFormData] = useState({
-    user_id: 10,
     title: "",
     content: "",
-    mood: "Neutral",
+    mood: "",
     is_private: true,
   });
 
@@ -30,7 +29,9 @@ const NewForm = () => {
 
   return (
     <div className="container mt-5">
-      <h1 className="mb-4">New Entry Form</h1>
+      <h4 className="mb-4 text-center">
+        Your voice matters. Share your story.{" "}
+      </h4>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
@@ -43,6 +44,7 @@ const NewForm = () => {
             name="title"
             value={formData.title}
             onChange={handleChange}
+            placeholder="What's on your mind?"
           />
         </div>
         <div className="mb-3">
@@ -55,6 +57,7 @@ const NewForm = () => {
             name="content"
             value={formData.content}
             onChange={handleChange}
+            placeholder="Tell me more..."
           />
         </div>
         <div className="mb-3">
@@ -68,6 +71,7 @@ const NewForm = () => {
             name="mood"
             value={formData.mood}
             onChange={handleChange}
+            placeholder="How are you feeling?"
           />
         </div>
         <div className="mb-3 form-check">

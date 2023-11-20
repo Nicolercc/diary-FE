@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function EntryCard({ entry }) {
   return (
-    <div className="card" style={{ width: "18rem", marginBottom: "10px" }}>
+    <div className="card m-3" style={{ width: "18rem", marginBottom: "10px" }}>
       <div className="card-body text-center">
         <h5 className="card-title">{entry.title}</h5>
         <p className="card-text">{entry.content}</p>

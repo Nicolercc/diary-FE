@@ -22,7 +22,7 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item mx-3">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" to="/all">
                 Entries
               </NavLink>
             </li>

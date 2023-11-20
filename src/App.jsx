@@ -6,13 +6,15 @@ import NewForm from "./Components/Diary/NewForm";
 import Show from "./Components/Diary/Show";
 import Edit from "./Components/Diary/EditForm";
 import "./app.css";
+import Home from "./Pages/Home";
 const App = () => {
   return (
     <Router>
       <div>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/all" element={<Index />} />
           <Route path="/new" element={<NewForm />} />
           <Route path="/show/:id" element={<Show />} />
           <Route path="/edit/:id" element={<Edit />} />

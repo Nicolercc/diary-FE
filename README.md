@@ -1,8 +1,50 @@
-# React + Vite
+# Personalized Journal App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is a front-end application for a personalized journal app. It is built using React with Vite as the build tool. The application utilizes React Router for navigation and Axios for making CRUD (Create, Read, Update, Delete) requests to interact with a corresponding back-end.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Create**: Add new journal entries.
+- **Read**: View a list of all journal entries, as well as individual entries.
+- **Update**: Modify existing journal entries.
+- **Delete**: Remove unwanted entries from your journal.
+
+## Prerequisites
+
+Make sure you have the following installed before setting up the project:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+
+## Installation
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/your-username/your-journal-app.git
+
+    "cd diary-fe"
+
+    "npm install"
+
+    "npm run dev"
+
+   ```
+
+   ## Technologies Used
+
+- **React**: JavaScript library for building user interfaces.
+- **Vite**: Fast build tool that enhances the React development experience.
+- **React Router**: Declarative routing for React.js applications.
+- **Axios**: Promise-based HTTP client for making API requests.
+- **Bootstrap**: Front-end framework for building responsive and visually appealing web applications.
+
+### Relevant Links
+
+- [Backend Repository](https://github.com/Nicolercc/diary-be)
+- [Backend Deployed Link]()
+- [ Website ]
+
+[Node.js](https://nodejs.org/)

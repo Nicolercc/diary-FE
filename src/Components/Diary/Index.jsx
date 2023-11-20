@@ -20,9 +20,9 @@ const EntryList = () => {
   }, []);
 
   return (
-    <div className="entry-list-container">
-      <h5>Entry List</h5>
-      <div className="entry-card-container">
+    <div className="entry-list-container m-5">
+      <h5></h5>
+      <div className="entry-card-container m-5">
         {entries.map((entry) => (
           <EntryCard key={entry.entry_id} entry={entry} />
         ))}
