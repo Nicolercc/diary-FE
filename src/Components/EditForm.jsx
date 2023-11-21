@@ -18,7 +18,6 @@ function EditForm() {
     const fetchEntry = async () => {
       try {
         const response = await axios.get(`${API}/entries/${id}`);
-        s;
         setFormData(response.data);
       } catch (error) {
         console.error("Error fetching entry for editing:", error);
@@ -29,7 +28,7 @@ function EditForm() {
   }, [id]);
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target.value;
+    const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: type === "checkbox" ? checked : value,
