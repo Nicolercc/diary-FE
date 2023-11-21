@@ -23,14 +23,10 @@ Make sure you have the following installed before setting up the project:
 1. **Clone, Install & Run:**
 
    ```bash
-   git clone https://github.com/your-username/your-journal-app.git
-
-    - "cd diary-fe"
-
-    - Install: "npm install"
-
-    - Run: "npm run dev"
-
+   git clone https://github.com/Nicolercc/diary-FE.git
+   cd diary-fe
+   npm install
+   npm run dev
    ```
 
    ## Technologies Used
@@ -41,10 +37,9 @@ Make sure you have the following installed before setting up the project:
 - **Axios**: Promise-based HTTP client for making API requests.
 - **Bootstrap**: Front-end framework for building responsive and visually appealing web applications.
 
-### Relevant Links
+## Relevant Links
 
 - [Backend Repository](https://github.com/Nicolercc/diary-be)
-- [Backend Deployed Link](https://diary-api-cjiz.onrender.com)
-
-- [ Website ]
-- [presentation]
+- [Backend Deployed Link](https://diary-api-cjiz.onrender.com) (Use the /entries endpoint to view entries)
+- [Website](https://main--nicolesdiaryapp.netlify.app)
+- [Presentation]
