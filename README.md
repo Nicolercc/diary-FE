@@ -38,7 +38,7 @@ Make sure you have the following installed before setting up the project:
 
 ## Relevant Links
 
-- [Backend Repository](https://github.com/Nicolercc/diary-be)
-- [Backend Deployed](https://diary-api-cjiz.onrender.com) (Use the /entries endpoint to view entries)
 - [Website](https://main--nicolesdiaryapp.netlify.app)
 - [Presentation]
+- [Backend Repository](https://github.com/Nicolercc/diary-be)
+- [Backend Deployed](https://diary-api-cjiz.onrender.com) (Use the /entries endpoint to view entries)
