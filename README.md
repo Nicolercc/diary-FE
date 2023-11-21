@@ -16,7 +16,7 @@ This is a front-end application for a personalized journal app. It is built usin
 Make sure you have the following installed before setting up the project:
 
 - [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+- [npm](https://www.npmjs.com/)
 
 ## Installation
 
@@ -24,7 +24,6 @@ Make sure you have the following installed before setting up the project:
 
    ```bash
    git clone https://github.com/Nicolercc/diary-FE.git
-   cd diary-fe
    npm install
    npm run dev
    ```
@@ -40,6 +39,6 @@ Make sure you have the following installed before setting up the project:
 ## Relevant Links
 
 - [Backend Repository](https://github.com/Nicolercc/diary-be)
-- [Backend Deployed Link](https://diary-api-cjiz.onrender.com) (Use the /entries endpoint to view entries)
+- [Backend Deployed](https://diary-api-cjiz.onrender.com) (Use the /entries endpoint to view entries)
 - [Website](https://main--nicolesdiaryapp.netlify.app)
 - [Presentation]
