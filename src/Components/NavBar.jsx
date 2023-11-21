@@ -6,7 +6,7 @@ function Nav() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         <NavLink className="navbar-brand m-3" to="/">
-          <h2>Diary</h2>
+          <h2 className="">Diary</h2>
         </NavLink>
         <button
           className="navbar-toggler"
@@ -20,8 +20,8 @@ function Nav() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item mx-3">
+          <ul className="navbar-nav ml-auto text-right">
+            <li className="nav-item mx-3 ">
               <NavLink className="nav-link" to="/all">
                 Entries
               </NavLink>

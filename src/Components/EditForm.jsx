@@ -18,7 +18,7 @@ function EditForm() {
     const fetchEntry = async () => {
       try {
         const response = await axios.get(`${API}/entries/${id}`);
-        // Prefill the form data with the fetched entry
+        s;
         setFormData(response.data);
       } catch (error) {
         console.error("Error fetching entry for editing:", error);
@@ -55,11 +55,11 @@ function EditForm() {
   };
 
   return (
-    <div className="container mt-4">
-      <h2>Edit Entry</h2>
+    <div className=" card container mt-5">
+      <h2 className="text-center m-3 display-5">Update your entry</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="title" className="form-label">
+          <label htmlFor="title" className="form-label lead">
             Title
           </label>
           <input
@@ -72,7 +72,7 @@ function EditForm() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="mood" className="form-label">
+          <label htmlFor="mood" className="form-label lead">
             Mood
           </label>
           <input
@@ -85,7 +85,7 @@ function EditForm() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="content" className="form-label">
+          <label htmlFor="content" className="form-label lead">
             Content
           </label>
           <textarea
@@ -105,13 +105,15 @@ function EditForm() {
             checked={formData.is_private}
             onChange={handleChange}
           />
-          <label className="form-check-label" htmlFor="isPrivateCheckbox">
+          <label className="form-check-label lead" htmlFor="isPrivateCheckbox ">
             Private Entry
           </label>
         </div>
-        <button type="submit" className="btn btn-primary">
-          Save Changes
-        </button>
+        <div className="m-4 text-center">
+          <button type="submit" className="btn btn-success">
+            Save Changes
+          </button>
+        </div>
       </form>
     </div>
   );

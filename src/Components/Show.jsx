@@ -47,20 +47,20 @@ function Show() {
   }
 
   return (
-    <div className="container mt-4">
+    <div className="container my-5">
       <div className="card mx-auto" style={{ maxWidth: "600px" }}>
         <div className="card-body text-center">
-          <h2 className="card-title">{entry.title}</h2>
-          <h5 className="card-subtitle mb-2 text-muted">
+          <h2 className="card-title m-3">{entry.title}</h2>
+          <h5 className="card-subtitle  text-muted m-3">
             I am feeing: {entry.mood}
           </h5>
-          <p className="card-text">{entry.content}</p>
-          <p className="card-text">
+          <p className="card-text m-4">{entry.content}</p>
+          <p className="card-text m-3">
             <strong>Creation Date:</strong> {entry.creation_date}
           </p>
         </div>
         <div className="card-footer">
-          <div className="form-check">
+          <div className="form-check m-3">
             <input
               type="checkbox"
               className="form-check-input"
@@ -76,7 +76,7 @@ function Show() {
       </div>
       <div className="mt-3 text-center">
         <button
-          className="btn btn-primary mx-2"
+          className="btn btn-success mx-2"
           onClick={() => navigate(`/edit/${id}`)}
         >
           Edit

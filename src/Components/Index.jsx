@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import axios from "axios";
 import EntryCard from "./EntryCard";
+import Home from "../Pages/Home";
+import Total from "./Total";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -24,11 +26,12 @@ const EntryList = () => {
   return (
     <div className="entry-list-container m-5">
       <h5></h5>
-      <div className="entry-card-container m-5">
+      <div className="row entry-card-container">
         {entries.map((entry) => (
           <EntryCard key={entry.entry_id} entry={entry} />
         ))}
       </div>
+      <Total entries={entries} />
     </div>
   );
 };
