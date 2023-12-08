@@ -39,6 +39,5 @@ Make sure you have the following installed before setting up the project:
 ## Relevant Links
 
 - [Website](https://main--nicolesdiaryapp.netlify.app)
-- [Presentation](https://us06web.zoom.us/rec/share/ovxAi2dg0dXpmzeOyaCNLzYVzwJJn83KnTfmNv7kbtJoTLy7k0VQCkdeOFCPD2im.5MSgsixLAc0tlAUH?startTime=1700634598000) = Passcode: B7b.NyO=
 - [Backend Repository](https://github.com/Nicolercc/diary-be)
 - [Backend Deployed](https://diary-api-cjiz.onrender.com) (Use the /entries endpoint to view entries)
